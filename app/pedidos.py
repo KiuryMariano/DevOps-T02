@@ -7,15 +7,15 @@ ter regras pequenas o suficiente para testar, refatorar e automatizar.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from decimal import Decimal, ROUND_HALF_UP
-#from decimal import ROUND_HALF_UP, Decimal
+
+# from decimal import Decimal, ROUND_HALF_UP
+from decimal import ROUND_HALF_UP, Decimal
 
 CENTAVOS = Decimal("0.01")
 CUPONS_VALIDOS: dict[str, Decimal] = {
     "DEVOPS10": Decimal("10"),
     "FAG15": Decimal("15"),
 }
-
 
 @dataclass(frozen=True)
 class ItemPedido:
